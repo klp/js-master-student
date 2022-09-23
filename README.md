@@ -1,2 +1,2 @@
 # js-master-student
-A repo for the Javascripting Master Student course
+The first repo to create for the [Javascripting Master Student course](http://zweibel.net/javascripting-masters-student).
