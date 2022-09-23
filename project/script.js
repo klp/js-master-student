@@ -1,1 +1,1 @@
-alert('Hey, it worked!');
+alert('Everything's coming up Milhouse!');
