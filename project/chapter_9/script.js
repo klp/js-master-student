@@ -21,7 +21,8 @@ $("#toggleJokes").click(function() {
 });
 
 $("#toggleColor").click(function () {
-    $this.css()
+    
+    })
 });
 
 let question = prompt("Are these jokes good or bad?")
