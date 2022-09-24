@@ -20,11 +20,6 @@ $("#toggleJokes").click(function() {
     $("#joke").toggle();
 });
 
-$("#toggleColor").click(function () {
-    
-    })
-});
-
 let question = prompt("Are these jokes good or bad?")
 
 if (question == "bad") {
