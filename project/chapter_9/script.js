@@ -1,3 +1,4 @@
+
 // alert("Everything's coming up Milhouse!");
 // $("h1").hide();
 $("#noShow").hide();
@@ -18,3 +19,13 @@ $("#toggleJokes").css({
 $("#toggleJokes").click(function() {
     $("#joke").toggle();
 });
+
+let question = prompt("Are these jokes good or bad?")
+
+if (question == "bad") {
+    $("h1").html("Worst Jokes Ever!");
+} else if (question == "good") {
+    $("h1").html("Best Bad Jokes Ever!");
+} else {
+    // do nothing
+}
