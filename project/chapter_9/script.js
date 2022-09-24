@@ -14,3 +14,7 @@ $("#toggleJokes").css({
     "border": "2px solid black",
     "margin": "10px"
 });
+
+$("#toggleJokes").click(function() {
+    $("#joke").toggle();
+});
