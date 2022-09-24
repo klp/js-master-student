@@ -38,20 +38,16 @@ img {
     align-items: center;
     width: 50%;
     margin: 0 auto;
-    color: rgb(255, 230, 204)
+    color: rgb(255, 230, 204);
 }
 
-#poem {
-    border: 3px solid rgb(16, 29, 55);
-    background-color: rgb(255, 195, 0); 
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: column;
-    align-items: center;
-    width: 40%;
-    margin: 0 auto;
-    color: rgb(72, 70, 70);
-    padding: 0.5em;
+#toggleColor {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 10px;
 }
 
