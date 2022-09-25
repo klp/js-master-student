@@ -20,6 +20,15 @@ $("#toggleJokes").click(function() {
     $("#joke").toggle();
 });
 
+$("#toggleColors").click(function() {
+    $("body").css("background-color", "white");
+    $(".formatText").css("color", "black");
+    $()
+});
+
+// worth thinking about how to get the button to toggle back
+//  https://stackoverflow.com/questions/41351730/change-style-back-and-forth
+
 let question = prompt("Are these jokes good or bad?")
 
 if (question == "bad") {
