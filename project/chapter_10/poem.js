@@ -13,7 +13,7 @@ line1.map(function(word){
   // Test to see if the .info property exists.
   if (word.info){
     // If it does, surround wordString in an <a> tag.
-    wordString = "<a href='#'>" + wordString + "</a>";
+    wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
   }
   // Add wordString plus a space to the line1Text.
   line1Text = line1Text + wordString + " ";
@@ -21,8 +21,9 @@ line1.map(function(word){
 $("#poem").html(line1Text);
 $("#poem a").click(function(){
     // Define the text and the word that was clicked.
-    let infoText, clickedWord;
+    let infoText, clickedWord, clickedInfo;
     clickedWord = $( this ).text();
-    infoText = "<h2>You clicked on the word: " + clickedWord + "</h2>";
+    clickedInfo = $( this ).data("info");
+    infoText = clickedInfo;
     $("#info").html(infoText);
   });
