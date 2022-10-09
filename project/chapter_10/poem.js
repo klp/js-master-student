@@ -13,7 +13,7 @@ $.getJSON("poem.json", function(data){ // data is JSON object
       let wordString;
       wordString = word.text;
       if (word.info){
-        wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
+        wordString = "<a href='#' data-info='" + word.info + " " + word.wiki + "'>" + wordString + "</a>";
       }
       lineText = lineText + wordString + " "; // add the word to the lineText with a space
     });
@@ -25,7 +25,7 @@ $.getJSON("poem.json", function(data){ // data is JSON object
   $("#poem a").click(function(){
     let infoText, clickedWord, clickedInfo;
     clickedWord = $( this ).text();
-    clickedInfo = $( this ).data("info") + "<br>" + $( this ).data("wiki");
+    clickedInfo = $( this ).data("info");
     infoText = clickedInfo;
     $("#info").html(infoText);
   });
