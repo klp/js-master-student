@@ -36,3 +36,7 @@ a:active {
     display: inline-block
 }
 
+#map {
+    height: 450px;
+}
+
