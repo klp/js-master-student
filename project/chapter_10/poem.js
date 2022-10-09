@@ -15,7 +15,7 @@ $.getJSON("poem.json", function(data){ // data is JSON object
       if (word.info){
         wordString = "<a href='#' data-info='" + word.info + "'>" + wordString + "</a>";
       }
-      lineText = lineText + wordString + " "; // add the word to the lineText with a spacie
+      lineText = lineText + wordString + " "; // add the word to the lineText with a space
     });
     poemText = poemText + lineText + "<br/>"; // add lineText to poemText with a break
   });
