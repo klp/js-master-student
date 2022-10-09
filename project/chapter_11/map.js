@@ -18,3 +18,14 @@ const circle = L.circle([40.7580, -73.9855], {
     fillOpacity: 0.5,
     radius: 500
 }).addTo(poemMap);
+
+// polyline
+const polyline = L.polyline([
+    [40.7580, -73.9855],
+    [40.7486, -73.9840]
+], {
+    color: 'green'
+}).addTo(poemMap);
+
+polyline.bindPopup("<b>Times Square to Graduate Center</b>");
+circle.bindPopup("I'm a circle!");
