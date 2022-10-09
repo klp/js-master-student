@@ -1,0 +1,38 @@
+body {
+    background-color: seagreen;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: seagreen;
+    font-weight: 600;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline dotted;
+}
+
+a:active {
+    text-decoration: none; 
+}
+
+.container {
+    background-color: seashell;
+    padding: 2em;
+}
+
+#poem {
+    font-style: oblique;
+    color: slategray;
+    background-color: white;
+    display: inline-block
+}
+
