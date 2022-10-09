@@ -11,3 +11,10 @@ poemMap.setView([40.7128, -74.0060], 16); // set the map view by default
 const timesSquare = L.marker([40.7580, -73.9855]).addTo(poemMap);
 timesSquare.bindPopup("<b>Times Square</b>"); //bind to popup
 
+// add a circle
+const circle = L.circle([40.7580, -73.9855], {
+    color: 'blue',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(poemMap);
