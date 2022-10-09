@@ -13,7 +13,7 @@ $.getJSON("poem.json", function(data){ // data is JSON object
       let wordString;
       wordString = word.text;
       if (word.info){
-        wordString = "<a href='#' data-info='" + word.info + " " + word.wiki + "'>" + wordString + "</a>";
+        wordString = "<a href='#' data-info='" + word.info + "<br>" + word.wiki + "'>" + wordString + "</a>";
       }
       lineText = lineText + wordString + " "; // add the word to the lineText with a space
     });

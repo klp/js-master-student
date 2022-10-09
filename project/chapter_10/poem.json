@@ -1,7 +1,7 @@
 {
     "lines": [
 [
-    {"text": "What", "info": "Anaphora: The repetition of a word or phrase at the beginning of (usually successive) lines. For example, the use of What in the first four lines.", "wikipedia": "https://en.wikipedia.org/wiki/Anaphora_(rhetoric)"},
+    {"text": "What", "info": "Anaphora: The repetition of a word or phrase at the beginning of (usually successive) lines. For example, the use of What in the first four lines.", "wiki": "https://en.wikipedia.org/wiki/Anaphora_(rhetoric)"},
     {"text": "hurrying"},
     {"text": "human"},
     {"text": "tides,"},
@@ -49,7 +49,7 @@
     {"text": "aspiration!", "info": "Accumulation: In this phrase we see an increasing crescendo of emotions to create rhetorical tension and affect.", "wiki": "https://en.wikipedia.org/wiki/Accumulatio"}
 ],
 [
-    {"text": "Thou", "info": "Along with being an anaphora (see above) with the lines that follow, Whitman uses a kind of personification here, addressing Times Square as Thou."},
+    {"text": "Thou", "info": "Along with being an anaphora (see above) with the lines that follow, Whitman uses a kind of personification here, addressing Times Square as Thou.", "wiki": "https://en.wikipedia.org/wiki/Personification"},
     {"text": "wilt"},
     {"text": "not"},
     {"text": "be"},

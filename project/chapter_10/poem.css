@@ -32,5 +32,7 @@ a:active {
 #poem {
     font-style: oblique;
     color: slategray;
+    background-color: white;
+    display: inline-block
 }
 
