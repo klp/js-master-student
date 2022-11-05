@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle {
+    height: 600px;
+    width: 800px;
+    background-color: rgba(100, 149, 237, .5);
+    border: solid;
+    border-color: darkcyan;
+    border-width: thick;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 8px gray;
+}
+
