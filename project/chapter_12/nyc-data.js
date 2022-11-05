@@ -30,17 +30,19 @@ L.geoJSON(nyc, {
     }
 }).addTo(nycMap);
 
-// $("#pan-to-flatbush").click(function() {
-//     const flatbush = nyc.features.find(function(feature) {
-//         return feature.properties.neighborhood === "Flatbush";
-//     })
-//     console.log(flatbush);
-//     const coordinate_flatbush = nyc.features.find(function(feature){
-//         return features.properties.neighborhood === "Flatbush";
-//     }).geometry.coordinate_flatbush;
-//     console.log(coordinate_flatbush);
-//     nycMap.panTo(new L.LatLng(coordinate_flatbush[0][0][1], coordinate_flatbush[0][0][0]));
-// });
+$("#pan-to-flatbush").click(function() {
+    // find flatbush neighborhood property in the dataset
+    let flatbush = nyc.features.find(function(feature) {
+        return feature.properties.neighborhood === "Flatbush";
+    });
+    console.log(flatbush);
+    // find the coordinates of sunnyside property
+    let coordinates = nyc.features.find(function(feature) {
+        return feature.properties.neighborhood === "Flatbush";
+    }).geometry.coordinates;
+    console.log(coordinates);
+    nycMap.panTo(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0]));
+});
 
 $("#pan-to-sunnyside").click(function() {
     // find flatbush neighborhood property in the dataset
