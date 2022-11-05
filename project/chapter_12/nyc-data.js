@@ -17,7 +17,7 @@ L.geoJSON(nyc, {
     style: function(feature) {
         if (feature.properties.borough === "Manhattan") {
             return {
-                color: "red",
+                color: "blue",
                 fillColor: "red",
                 fillOpacity: 0.3
             };
