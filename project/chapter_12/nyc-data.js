@@ -32,15 +32,6 @@ L.geoJSON(nyc, {
     }
 }).addTo(nycMap);
 
-// challenge 2
-L.polyline(nyc, {
-    style: function(feature){
-        return {
-            color: "green"
-        };
-    }
-}).addTo(nycMap)
-
 // show each borough on the map
 L.geoJSON(nyc, {
     onEachFeature: function(feature, layer) {
