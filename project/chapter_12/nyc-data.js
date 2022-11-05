@@ -15,6 +15,7 @@ L.geoJSON(nyc).addTo(nycMap);
 // add some fill color to the map
 L.geoJSON(nyc, {
     style: function(feature) {
+        // challenge 3
         if (feature.properties.borough === "Manhattan") {
             return {
                 color: "blue",
@@ -30,6 +31,15 @@ L.geoJSON(nyc, {
         }
     }
 }).addTo(nycMap);
+
+// challenge 2
+L.polyline(nyc, {
+    style: function(feature){
+        return {
+            color: "green"
+        };
+    }
+}).addTo(nycMap)
 
 // show each borough on the map
 L.geoJSON(nyc, {
@@ -52,6 +62,7 @@ $("#pan-to-flatbush").click(function() {
     nycMap.panTo(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0]));
 });
 
+// challenge 1
 $("#pan-to-sunnyside").click(function() {
     // find flatbush neighborhood property in the dataset
     let sunnyside = nyc.features.find(function(feature) {
