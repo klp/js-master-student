@@ -17,7 +17,7 @@ L.geoJSON(nyc, {
     style: function(feature) {
         return {
             color: "blue",
-            fillColor: "purple",
+            fillColor: "gray",
             fillOpacity: 0.3
         };
     }
@@ -55,3 +55,35 @@ $("#pan-to-sunnyside").click(function() {
     console.log(coordinates);
     nycMap.panTo(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0]));
 });
+
+// loop over neighborhoods, filter out nulls, return values, sort and log to console
+const neighborhoods = nyc.features.map(function(feature){
+    return feature.properties.neighborhood;
+}).filter(function(neighborhood) {
+    return neighborhood !== "";
+}).sort();
+console.log(neighborhoods);
+
+// display all the neighborhoods in the neighborhoods div
+neighborhoods.forEach(function(neighborhood) {
+    $("#neighborhoods").append("<a href ='#'><li>" + neighborhood + "</li></a>");
+    // display in columns
+    if (neighborhoods.indexOf(neighborhood) % 4 === 0) {
+        $("#neighborhoods").append("<br>");
+    }
+});
+
+// clicking a neighborhood link pans map to that neighborhood
+$("#neighborhoods").on("click", "li", function() {
+    let neighborhoodText = $(this).text(); // get the text of the neighborhood
+    let coordinates = nyc.features.find(function(feature) {
+        return feature.properties.neighborhood === neighborhoodText;
+    }).geometry.coordinates; // get the coordinates 'hood
+    nycMap.panTo(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0])); // pan
+    nycMap.setZoom(16);
+    // add a marker to the neighborhood polygon
+    L.marker(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0])).addTo(nycMap);
+    // add a popup to the marker
+    L.marker(new L.LatLng(coordinates[0][0][1], coordinates[0][0][0])).bindPopup("<h3>" + neighborhoodText + "</h3>").addTo(nycMap);
+});
+
