@@ -4,3 +4,7 @@ $(document).on('keypress', function(event) {
         console.log("You pressed enter");
     }
 });
+
+$("#scroll-to-top").click(function() {
+    $("html").animate({ scrollTop: 0 }, "slow");
+});
