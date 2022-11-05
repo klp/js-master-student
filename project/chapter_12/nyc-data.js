@@ -15,11 +15,19 @@ L.geoJSON(nyc).addTo(nycMap);
 // add some fill color to the map
 L.geoJSON(nyc, {
     style: function(feature) {
-        return {
-            color: "blue",
-            fillColor: "gray",
-            fillOpacity: 0.3
-        };
+        if (feature.properties.borough === "Manhattan") {
+            return {
+                color: "red",
+                fillColor: "red",
+                fillOpacity: 0.3
+            };
+        } else {
+            return {
+                color: "blue",
+                fillColor: "yellow",
+                fillOpacity: 0.3
+            };
+        }
     }
 }).addTo(nycMap);
 
