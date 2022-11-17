@@ -1,7 +1,7 @@
 // log to console if 'enter' key is pressed
 $(document).on('keypress', function(event) {
     if(event.which == 13 ) {
-        console.log("You pressed enter");
+        $("#enter-counter").append(`The user has pressed enter.`)
     }
 });
 
